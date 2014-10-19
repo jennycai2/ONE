@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <meta name="viewport" content="width=320">
+  <head>
+    <title>Practice</title> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $(function(){     // once the page is loaded
+      setInterval(function(){
+        $("#btnsubmit").trigger("click");
+      }, 30 * 60 * 1000);
+    });
+    </script>
+  </head>
+
+  <body>
+    <h2>Practice</h2> 
+    {{username}} has signed in.
+    <br>
+    <br>
+    
+
+    {% if connected %}
+        {{msg}}
+        <a href="skype:{{skype}}?call">Place a Skype call to {{skype}}</a>
+    {% else %}
+        {{msg}}
+    {% endif %}
+    <br>
+    <br>
+
+
+    Current time is {{time}} GMT
+    <br>
+    <br>
+
+
+    <form method="post">
+      <input id="btnsubmit" type="Submit" value="Speak and Give Feedback">
+    </form>
+
+  </body>
+</html>
