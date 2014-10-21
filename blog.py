@@ -592,7 +592,7 @@ class Practice(BaseHandler):
 
 application = webapp2.WSGIApplication([
 	('/?', PracticeFront),
-    ('/starter', Starter),
+    
     ('/test', Test),
     ('/stats', Stats),
     ('/signup', Register),
